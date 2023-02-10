@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -38,14 +37,27 @@
     transform: rotate(360deg);
   }
 }
+
 .container {
   width: 100%;
+  position: relative;
   margin: auto;
-  display: flex;
-  height: 100vh;
 }
 .childs {
+  width: 60%;
+  margin: auto;
+  height: 50%;
+}
+@media screen and (max-width: 480px) and (min-width: 0px) {
+  .childs {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 760px) and (min-width: 481px) {
+  .childs {
+    width: 75%;
+  }
+}
+.childs canvas {
   width: 50%;
-  border: 2px solid teal;
-  height: 100vh;
 }
